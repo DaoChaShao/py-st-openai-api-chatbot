@@ -1,0 +1,5 @@
+dotenv
+git-changelog
+openai
+streamlit
+watchdog
