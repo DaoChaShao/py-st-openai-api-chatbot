@@ -23,6 +23,7 @@
 
 ### Docs
 
+- update CHANGELOG.md with recent feature additions ([c422a77](https://github.com///commit/c422a77b02f8a743efedf8a1966c54635cada463))
 - add CHANGELOG.md with initial version 0.1.0 and feature list ([d686d5a](https://github.com///commit/d686d5a52fb5970e414689230ad1e5af9e79847b))
 - add usage instructions and license information to README ([06a7f9b](https://github.com///commit/06a7f9b07697d4e480a37727d8e080368bb941cc))
 - add requirements file with essential dependencies ([000ce17](https://github.com///commit/000ce17c1dac652b106e3ea90fbecbee632c1fa4))
