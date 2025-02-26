@@ -7,7 +7,7 @@
 # @Desc     :
 
 from streamlit import (sidebar, header, selectbox, caption, text_input,
-                       segmented_control, slider)
+                       segmented_control, slider, text_area, button)
 from time import perf_counter
 from yaml import safe_load
 
@@ -40,7 +40,7 @@ def yaml_loader(file_path: str = "utilis/config.yaml") -> dict:
     return config
 
 
-def parameters() -> tuple[str, str, str, float, float]:
+def parameters_opener() -> tuple[str, str, str, float, float]:
     """ Set the hyperparameters for the Ollama model.
 
     :return: the model name, temperature, and top P
@@ -126,9 +126,13 @@ class Timer(object):
     def __init__(self, precision: int = 5, description: str = None):
         self._precision = precision
         self._description = description
+        self._start = None
+        self._end = None
+        self._elapsed = None
 
     def __enter__(self):
         self._start = perf_counter()
+        print(f"{self._description} started.")
         return self
 
     def __exit__(self, *args):
@@ -136,4 +140,52 @@ class Timer(object):
         self._elapsed = self._end - self._start
 
     def __repr__(self):
-        return f"{self._description} took {self._elapsed:.{self._precision}f} seconds."
+        if self._elapsed is not None:
+            return f"{self._description} took {self._elapsed:.{self._precision}f} seconds."
+        return f"{self._description} has not been started."
+
+
+def parameters_embedder():
+    """ Set the hyperparameters for the Ollama model.
+
+    :return: the model name, temperature, and top P
+    """
+    thing: str = ""
+    stuff: str = ""
+
+    with sidebar:
+        header("Hyperparameters")
+
+        model_types: list = ["OpenAI"]
+        model_category: str = segmented_control(
+            "Model Category", model_types, default=model_types[0], disabled=True, selection_mode="single",
+            help="Select the model category."
+        )
+
+        match model_category:
+            case "OpenAI":
+                options: list = ["text-embedding-3-small"]
+        model_name: str = selectbox(
+            "Model", options, disabled=True, help="Select a model"
+        )
+        caption(f"The model you selected is: **{model_name}**")
+
+        api_key: str = text_input(
+            "API Key", placeholder="Enter your API key", type="password",
+            max_chars=200, help="The API key for the model."
+        )
+        if api_key_checker(api_key):
+            caption(f"The **{len(api_key)}**-digit API key is **valid**")
+
+            thing: str = text_input(
+                "Enter One Thing", placeholder="Enter the text", max_chars=100,
+                help="The text to be embedded."
+            )
+            stuff: str = text_input(
+                "Enter Another Thing", placeholder="Enter the text", max_chars=100,
+                help="The text to be embedded."
+            )
+        else:
+            caption(f"The **{len(api_key)}**-digit API key is **invalid**")
+
+        return model_name, api_key, thing, stuff
