@@ -11,9 +11,9 @@ from streamlit import Page, navigation
 
 def pages_layout():
     elements: dict = {
-        "page": ["subpages/home.py", "subpages/chatbot.py"],
-        "title": ["Home", "Chatbot"],
-        "icon": [":material/home:", ":material/smart_toy:"],
+        "page": ["subpages/home.py", "subpages/chatbot.py", "subpages/embedder.py"],
+        "title": ["Home", "Chatbot", "Embedder"],
+        "icon": [":material/home:", ":material/smart_toy:", ":material/memory:"],
     }
 
     structure: dict = {
@@ -22,6 +22,7 @@ def pages_layout():
         ],
         "Models": [
             Page(page=elements["page"][1], title=elements["title"][1], icon=elements["icon"][1]),
+            Page(page=elements["page"][2], title=elements["title"][2], icon=elements["icon"][2]),
         ],
     }
     pg = navigation(structure, position="sidebar", expanded=True)
