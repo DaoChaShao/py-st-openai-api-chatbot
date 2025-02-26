@@ -16,13 +16,13 @@ from utilis.tools import parameters_embedder, Timer, api_key_checker
 
 empty_message: empty = empty()
 
-model_name, api_key, thing, stuff = parameters_embedder()
+model_name, api_key, thing_x, thing_y, thing_z = parameters_embedder()
 
 if api_key and api_key_checker(api_key):
     empty_message.success("The API key has been set.")
 
-    if thing and stuff:
-        prompt: list = [thing, stuff]
+    if thing_x and thing_y and thing_z:
+        prompt: list = [thing_x, thing_y, thing_z]
         with sidebar:
             embed = button("Embedder", type="primary", help="Embed the text.")
 
@@ -35,11 +35,11 @@ if api_key and api_key_checker(api_key):
                     data_editor(df_embed, disabled=True, use_container_width=True)
 
                     # Reduce the dimensions of the features using UMAP
-                    reducer: DataFrame = PCALearnerDimensionsReducer(2).fit(df_embed)
+                    reducer: DataFrame = PCALearnerDimensionsReducer().fit(df_embed)
                     data_editor(reducer, hide_index=True, disabled=True, use_container_width=True)
 
                     # Display the chart of scatter
-                    chart = scatter_2d(reducer, point_size=10, font_size=12)
+                    chart = scatter_2d(reducer, point_size=10, font_size=18)
                     plotly_chart(chart)
 
                     balloons()
