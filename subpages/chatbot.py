@@ -43,7 +43,7 @@ if model_name != "Select a Model":
 
                 with Timer(2, description="Local Model Call") as timer:
                     with chat_message("assistant"):
-                        response = Opener(api_key, temperature, top_p).client(prompt, content, model_name)
+                        response = Opener(api_key, temperature, top_p).client(prompt_all, content, model_name)
                         write(response)
                         balloons()
 
