@@ -49,7 +49,7 @@ class Opener(object):
         ]
 
         completion = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model=model,
             store=False,
             messages=messages,
             stream=False,
