@@ -29,6 +29,10 @@
 - add models.py file with initial structure and metadata ([78ead21](https://github.com///commit/78ead21d3b6ebdd3f74e9d6bb705b693acb5b677))
 - add initial tools.py file with metadata ([7d19481](https://github.com///commit/7d194814ffb4c6a8f0275e9420b2ae4baf780618))
 
+### Bug Fixes
+
+- remove duplicate empty_message initialization in chatbot.py ([6e3685c](https://github.com///commit/6e3685c6d30080af2c4a76a70b55d60852652bd1))
+
 ### Chore
 
 - update PCALearnerDimensionsReducer to use 3 dimensions for PCA ([740bfdd](https://github.com///commit/740bfdd7bec6eff5e4b12325e2d978d3d9c5e755))
@@ -36,6 +40,7 @@
 
 ### Docs
 
+- update CHANGELOG.md to reflect recent changes and enhancements ([e2c75ac](https://github.com///commit/e2c75ac37d19de6eacd7241090a1a71add4e7965))
 - update CHANGELOG.md to include recent feature additions and enhancements ([bf5eff2](https://github.com///commit/bf5eff2f4f2d97cd202ac74e35328b1d046b0821))
 - update CHANGELOG.md to include recent enhancements and refactoring ([3c37abe](https://github.com///commit/3c37abe545c4d4adbd2a87a3ae41791dd6afc85a))
 - update CHANGELOG.md with recent feature additions ([f64a51e](https://github.com///commit/f64a51e44f4afa615645c0a74e4eb713b610502e))
