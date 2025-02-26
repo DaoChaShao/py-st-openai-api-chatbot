@@ -7,7 +7,7 @@
 # @Desc     :
 
 from streamlit import (sidebar, header, selectbox, caption, text_input,
-                       segmented_control, slider, empty)
+                       segmented_control, slider)
 from time import perf_counter
 from yaml import safe_load
 
