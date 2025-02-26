@@ -57,3 +57,33 @@ class Opener(object):
             top_p=self._top_p,
         )
         return completion.choices[0].message.content
+
+
+class Embedder(object):
+
+    def __init__(self, api_key: str) -> None:
+        self._api_key = api_key
+        # self._config = dotenv_values(".env")
+
+    def client(self, prompt: list, model: str, dimensions: int = 1024) -> list:
+        """ Initialize the OpenAI Embeddings API
+                - dimensions: 256、512、1024、1536
+
+        :param dimensions: int: The number of dimensions for the embedding
+        :param model: str: The model to use for the embedding
+        :param prompt: list: The input text to be embedded
+        :return: None
+        """
+        # client = OpenAI(api_key=self._config["API_KEY"], base_url="https://api.openai.com/v1")
+        client = OpenAI(api_key=self._api_key, base_url="https://api.openai.com/v1")
+        # print(len(config["API_KEY"]))  # 164-digit key
+
+        response = client.embeddings.create(
+            input=prompt,
+            model=model,
+            dimensions=dimensions,
+            encoding_format="float",
+            timeout=3,
+        )
+
+        return [item.embedding for item in response.data]
