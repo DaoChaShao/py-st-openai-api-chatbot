@@ -12,11 +12,11 @@ from streamlit import (chat_input, empty, chat_message, write, sidebar,
 from utilis.models import Opener
 from utilis.tools import parameters_opener, Timer, api_key_checker
 
+empty_message: empty = empty()
+
 # Initialize the chat history
 if "messages" not in session_state:
     session_state.messages = []
-
-empty_message: empty = empty()
 
 model_name, api_key, content, temperature, top_p = parameters_opener()
 prompt: str = chat_input("Say something", max_chars=100)
@@ -43,7 +43,7 @@ if model_name != "Select a Model":
 
                 with Timer(2, description="Local Model Call") as timer:
                     with chat_message("assistant"):
-                        response = Opener(api_key, temperature, top_p).client(prompt, content, model_name)  # 生成 AI 回复
+                        response = Opener(api_key, temperature, top_p).client(prompt, content, model_name)
                         write(response)
                         balloons()
 
