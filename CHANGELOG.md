@@ -44,6 +44,7 @@
 
 ### Docs
 
+- update CHANGELOG.md to include recent changes in tools.py, embedder.py, and chart_plot.py ([849ecad](https://github.com///commit/849ecada99f38a969b408deda5646920279446fc))
 - update CHANGELOG.md to include recent bug fixes ([c5af480](https://github.com///commit/c5af48035c76100d4fa10d50bbfe3e3af899ec57))
 - update CHANGELOG.md to reflect recent changes and enhancements ([e2c75ac](https://github.com///commit/e2c75ac37d19de6eacd7241090a1a71add4e7965))
 - update CHANGELOG.md to include recent feature additions and enhancements ([bf5eff2](https://github.com///commit/bf5eff2f4f2d97cd202ac74e35328b1d046b0821))
