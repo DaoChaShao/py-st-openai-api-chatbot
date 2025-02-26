@@ -5,6 +5,11 @@
 
 ### Features
 
+- implement API key validation and YAML configuration loading in tools.py ([4d7c917](https://github.com///commit/4d7c9175ea6ca5f8952a679c2304fdbefa9301dc))
+- add pyyaml to requirements for enhanced YAML support ([9177d8c](https://github.com///commit/9177d8c94825c8e8758cea4b96750b840a378524))
+- update model selection in chat completion to use dynamic model variable ([102287e](https://github.com///commit/102287e04b8c00c9c80978b658ea2bd2c50d060e))
+- import parameters from utilis.tools for model configuration ([1a56dc8](https://github.com///commit/1a56dc87fc3d55760a5cb2438d49116cef0d9f5c))
+- add configuration for OpenAI and DeepSeek system content with temperature settings ([3eb6808](https://github.com///commit/3eb68088758aca93dc293a4b6d885b877ab2bd35))
 - integrate pages layout function into main execution flow ([de0c3f7](https://github.com///commit/de0c3f74fe18061596157a6200c6e11936a7f8b0))
 - enhance home page with instructions and GitHub link for OpenAI model access ([336d02d](https://github.com///commit/336d02d9db73ead37ebbd144ec5f2a9e991b14e6))
 - implement pages layout function for sidebar navigation ([afbfec9](https://github.com///commit/afbfec92b520f64518e8f7684e55adfff00f4153))
@@ -23,7 +28,7 @@
 
 ### Docs
 
-- update CHANGELOG.md with recent feature additions ([c422a77](https://github.com///commit/c422a77b02f8a743efedf8a1966c54635cada463))
+- update CHANGELOG.md with recent feature additions ([8e91646](https://github.com///commit/8e916463052f9d6aacb4d0ab57051f0ff096ae1c))
 - add CHANGELOG.md with initial version 0.1.0 and feature list ([d686d5a](https://github.com///commit/d686d5a52fb5970e414689230ad1e5af9e79847b))
 - add usage instructions and license information to README ([06a7f9b](https://github.com///commit/06a7f9b07697d4e480a37727d8e080368bb941cc))
 - add requirements file with essential dependencies ([000ce17](https://github.com///commit/000ce17c1dac652b106e3ea90fbecbee632c1fa4))
