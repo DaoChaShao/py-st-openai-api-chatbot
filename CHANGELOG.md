@@ -29,6 +29,7 @@
 
 ### Docs
 
+- update CHANGELOG.md to include recent enhancements and refactoring ([9e3ce27](https://github.com///commit/9e3ce279ef4cc2aac8b828d8b5328492b1c36d9c))
 - update CHANGELOG.md with recent feature additions ([f64a51e](https://github.com///commit/f64a51e44f4afa615645c0a74e4eb713b610502e))
 - add CHANGELOG.md with initial version 0.1.0 and feature list ([d686d5a](https://github.com///commit/d686d5a52fb5970e414689230ad1e5af9e79847b))
 - add usage instructions and license information to README ([06a7f9b](https://github.com///commit/06a7f9b07697d4e480a37727d8e080368bb941cc))
