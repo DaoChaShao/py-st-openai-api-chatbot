@@ -38,18 +38,29 @@ def scatter_2d(features: DataFrame, point_size: int, font_size: int):
     # Define the columns to be used for plotting
     categories: list = features.columns.tolist()
 
-    fig = express.scatter(
+    fig = express.scatter_3d(
         data_frame=features,
         x=features.iloc[0].values,
         y=features.iloc[1].values,
+        z=features.iloc[2].values,
         color=categories,
         text=categories,
-        title=f"Feature Differences among {categories[0]} and {categories[1]}",
+        title=f"Feature Differences among {categories[0]}, {categories[1]} and {categories[2]}",
         height=600,
     )
 
     # Specific adjustments
-    fig.update_traces(textposition="top center")
     fig.update_traces(marker=dict(size=point_size), textfont=dict(size=font_size))
+
+    # Adjust layout settings for better positioning
+    fig.update_layout(
+        legend=dict(
+            orientation="h",  # Set the legend to be horizontal
+            yanchor="bottom",  # Position legend at the bottom
+            xanchor="center",  # Center the legend
+            y=-0.15,  # Adjust vertical positioning of legend (move further down)
+            x=0.5  # Center the legend horizontally
+        )
+    )
 
     return fig
