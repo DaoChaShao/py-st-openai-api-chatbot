@@ -14,14 +14,13 @@ from sklearn.decomposition import PCA
 class PCALearnerDimensionsReducer(object):
     """ Reduce the dimensions of the features using PCA """
 
-    def __init__(self, dimensions: int = 2):
+    def __init__(self, dimensions: int = 3):
         self._dims = dimensions
 
     def fit(self, features: DataFrame, seed=None) -> DataFrame:
         """ Fit and transform the features using PCA """
         # Extract words (keys) and their vectors (values)
         categories = features.index.tolist()
-        print(categories)
         vectors = features.values
 
         # Reduce from ND to 3D using PCA
