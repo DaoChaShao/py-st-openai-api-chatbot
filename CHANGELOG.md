@@ -5,6 +5,12 @@
 
 ### Features
 
+- add parameters_embedder function for setting hyperparameters and API key validation ([da5e4bc](https://github.com///commit/da5e4bcbf471cbe79f8b082ba27158f9dbdba769))
+- add Embedder class for OpenAI embeddings API integration ([52fb282](https://github.com///commit/52fb282fafbfff3cdda01aae18ac262ae6c519bd))
+- add embedder page to layout with corresponding title and icon ([9318a5c](https://github.com///commit/9318a5c26c1712e435ae42144a5804dba4652d23))
+- add embedder functionality with API key validation and text embedding ([4c3c53a](https://github.com///commit/4c3c53aef8076ca9897e938c3143ac4a76871d20))
+- update chatbot functionality to use parameters_opener and add error handling for invalid API keys ([0a0d5d7](https://github.com///commit/0a0d5d7e48d947093b1e6cdffe236be04b7d516e))
+- add PCA dimension reduction and 2D scatter plot functionality ([1d3846c](https://github.com///commit/1d3846c1296f681d061963ec6ea1179014991469))
 - enhance chatbot functionality with API key validation and chat history management ([07a13df](https://github.com///commit/07a13df475d49856c45c052864d12505f3633843))
 - implement API key validation and YAML configuration loading in tools.py ([4d7c917](https://github.com///commit/4d7c9175ea6ca5f8952a679c2304fdbefa9301dc))
 - add pyyaml to requirements for enhanced YAML support ([9177d8c](https://github.com///commit/9177d8c94825c8e8758cea4b96750b840a378524))
@@ -29,7 +35,7 @@
 
 ### Docs
 
-- update CHANGELOG.md to include recent enhancements and refactoring ([9e3ce27](https://github.com///commit/9e3ce279ef4cc2aac8b828d8b5328492b1c36d9c))
+- update CHANGELOG.md to include recent enhancements and refactoring ([3c37abe](https://github.com///commit/3c37abe545c4d4adbd2a87a3ae41791dd6afc85a))
 - update CHANGELOG.md with recent feature additions ([f64a51e](https://github.com///commit/f64a51e44f4afa615645c0a74e4eb713b610502e))
 - add CHANGELOG.md with initial version 0.1.0 and feature list ([d686d5a](https://github.com///commit/d686d5a52fb5970e414689230ad1e5af9e79847b))
 - add usage instructions and license information to README ([06a7f9b](https://github.com///commit/06a7f9b07697d4e480a37727d8e080368bb941cc))
@@ -38,4 +44,8 @@
 ### Code Refactoring
 
 - remove unused import from tools.py ([f155a2e](https://github.com///commit/f155a2edc7efe8a9537264a785a60e1c5f7ff88c))
+
+### Dependencies
+
+- update requirements.txt with new dependencies for data processing and visualization ([548b064](https://github.com///commit/548b064cefc880028cfb11a96d289c2e3de5457c))
 
