@@ -31,6 +31,9 @@
 
 ### Bug Fixes
 
+- update tools.py to rename variables for clarity and handle three input parameters ([6cd474a](https://github.com///commit/6cd474ac03a76a381565f4f37f572773ac974a97))
+- update embedder.py to handle three parameters and adjust scatter plot font size ([cccd4d2](https://github.com///commit/cccd4d2997a7534dc8b9a5c535dec95e35b7f359))
+- update chart_plot.py to use 3D scatter plot and improve legend layout ([6e8eb96](https://github.com///commit/6e8eb96b815df935662accc8e6f70ec2ea4be609))
 - update prompt variable in chatbot.py for correct API call ([c1a7fc0](https://github.com///commit/c1a7fc05f4495f0564d18e0f209a29a4bb7ed03f))
 - remove duplicate empty_message initialization in chatbot.py ([b134ac1](https://github.com///commit/b134ac1a941fee9deee5336536e5d83c8d35e10c))
 
@@ -41,7 +44,7 @@
 
 ### Docs
 
-- update CHANGELOG.md to include recent bug fixes ([6cfcf7d](https://github.com///commit/6cfcf7dca06f9b241cb5e225ecd116dda693d5c1))
+- update CHANGELOG.md to include recent bug fixes ([c5af480](https://github.com///commit/c5af48035c76100d4fa10d50bbfe3e3af899ec57))
 - update CHANGELOG.md to reflect recent changes and enhancements ([e2c75ac](https://github.com///commit/e2c75ac37d19de6eacd7241090a1a71add4e7965))
 - update CHANGELOG.md to include recent feature additions and enhancements ([bf5eff2](https://github.com///commit/bf5eff2f4f2d97cd202ac74e35328b1d046b0821))
 - update CHANGELOG.md to include recent enhancements and refactoring ([3c37abe](https://github.com///commit/3c37abe545c4d4adbd2a87a3ae41791dd6afc85a))
