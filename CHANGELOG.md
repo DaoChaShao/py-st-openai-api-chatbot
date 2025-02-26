@@ -31,7 +31,8 @@
 
 ### Bug Fixes
 
-- remove duplicate empty_message initialization in chatbot.py ([6e3685c](https://github.com///commit/6e3685c6d30080af2c4a76a70b55d60852652bd1))
+- update prompt variable in chatbot.py for correct API call ([c1a7fc0](https://github.com///commit/c1a7fc05f4495f0564d18e0f209a29a4bb7ed03f))
+- remove duplicate empty_message initialization in chatbot.py ([b134ac1](https://github.com///commit/b134ac1a941fee9deee5336536e5d83c8d35e10c))
 
 ### Chore
 
