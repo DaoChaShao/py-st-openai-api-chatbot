@@ -5,3 +5,7 @@
 # @Version  :   Version 0.1.0
 # @File     :   chatbot.py
 # @Desc     :
+
+from utilis.tools import parameters
+
+model_name, api_key, content, temperature, top_p = parameters()
