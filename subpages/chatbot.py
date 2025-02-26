@@ -7,10 +7,10 @@
 # @Desc     :
 
 from streamlit import (chat_input, empty, chat_message, write, sidebar,
-                       session_state, button, caption, rerun)
+                       session_state, button, caption, rerun, balloons)
 
 from utilis.models import Opener
-from utilis.tools import parameters, Timer, api_key_checker
+from utilis.tools import parameters_opener, Timer, api_key_checker
 
 # Initialize the chat history
 if "messages" not in session_state:
@@ -18,7 +18,7 @@ if "messages" not in session_state:
 
 empty_message: empty = empty()
 
-model_name, api_key, content, temperature, top_p = parameters()
+model_name, api_key, content, temperature, top_p = parameters_opener()
 prompt: str = chat_input("Say something", max_chars=100)
 
 if model_name != "Select a Model":
@@ -45,6 +45,7 @@ if model_name != "Select a Model":
                     with chat_message("assistant"):
                         response = Opener(api_key, temperature, top_p).client(prompt, content, model_name)  # 生成 AI 回复
                         write(response)
+                        balloons()
 
                         # Add the AI response to the chat history
                         session_state.messages.append({"role": "assistant", "content": response})
@@ -52,6 +53,8 @@ if model_name != "Select a Model":
                 empty_message.success(f"**{str(timer)}**")
             else:
                 empty_message.error("Please enter a prompt to generate a response.")
+        else:
+            empty_message.error("The API key you entered is invalid.")
     else:
         empty_message.error("Please enter the API key for the model.")
 else:
