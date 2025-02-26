@@ -150,8 +150,9 @@ def parameters_embedder():
 
     :return: the model name, temperature, and top P
     """
-    thing: str = ""
-    stuff: str = ""
+    thing_x: str = ""
+    thing_y: str = ""
+    thing_z: str = ""
 
     with sidebar:
         header("Hyperparameters")
@@ -177,15 +178,19 @@ def parameters_embedder():
         if api_key_checker(api_key):
             caption(f"The **{len(api_key)}**-digit API key is **valid**")
 
-            thing: str = text_input(
-                "Enter One Thing", placeholder="Enter the text", max_chars=100,
+            thing_x: str = text_input(
+                "Enter the 1st Thing", placeholder="Enter the text", max_chars=100,
                 help="The text to be embedded."
             )
-            stuff: str = text_input(
-                "Enter Another Thing", placeholder="Enter the text", max_chars=100,
+            thing_y: str = text_input(
+                "Enter the 2nd Thing", placeholder="Enter the text", max_chars=100,
+                help="The text to be embedded."
+            )
+            thing_z: str = text_input(
+                "Enter the 3rd Thing", placeholder="Enter the text", max_chars=100,
                 help="The text to be embedded."
             )
         else:
             caption(f"The **{len(api_key)}**-digit API key is **invalid**")
 
-        return model_name, api_key, thing, stuff
+        return model_name, api_key, thing_x, thing_y, thing_z
