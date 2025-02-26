@@ -41,6 +41,7 @@
 
 ### Docs
 
+- update CHANGELOG.md to include recent bug fixes ([6cfcf7d](https://github.com///commit/6cfcf7dca06f9b241cb5e225ecd116dda693d5c1))
 - update CHANGELOG.md to reflect recent changes and enhancements ([e2c75ac](https://github.com///commit/e2c75ac37d19de6eacd7241090a1a71add4e7965))
 - update CHANGELOG.md to include recent feature additions and enhancements ([bf5eff2](https://github.com///commit/bf5eff2f4f2d97cd202ac74e35328b1d046b0821))
 - update CHANGELOG.md to include recent enhancements and refactoring ([3c37abe](https://github.com///commit/3c37abe545c4d4adbd2a87a3ae41791dd6afc85a))
